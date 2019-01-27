@@ -19,8 +19,13 @@ class TodosViewController: UIViewController {
         title = "Posts"
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
+        loadData()
+        }
 
-        AF.request("https://jsonplaceholder.typicode.com/todos").responseJSON { (dataResponse) in
+    // MARK: - Methods
+    private func loadData() {
+        AF.request("https://jsonplaceholder.typicode.com/todos").responseJSON { [weak self] (dataResponse) in
             switch dataResponse.result {
             case .success(let value):
                 guard let array = value as? [Any] else { return }
@@ -30,8 +35,8 @@ class TodosViewController: UIViewController {
                     guard let post = Post(jsonDict: item) else { return }
                     posts.append(post)
                 }
-                self.dataSource = posts
-                self.tableView.reloadData()
+                self?.dataSource = posts
+                self?.tableView.reloadData()
             case.failure(let error):
                 print(error.localizedDescription)
             }
@@ -39,14 +44,18 @@ class TodosViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension TodosViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as? PostTableViewCell else {
+            fatalError("PostTableViewCell doesn't exist")
+        }
         let post = dataSource[indexPath.row]
+        cell.update(title: post.title, userId: post.userId, completed: post.completed, id: post.id)
         return cell
     }
 }

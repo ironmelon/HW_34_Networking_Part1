@@ -14,6 +14,8 @@
 		E393A1FA21FD67F5008BE843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E393A1F821FD67F5008BE843 /* LaunchScreen.storyboard */; };
 		E393A22621FD825C008BE843 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A22521FD825C008BE843 /* TodosViewController.swift */; };
 		E393A22921FD92C9008BE843 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A22821FD92C9008BE843 /* Post.swift */; };
+		E393A22C21FD9DB6008BE843 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A22A21FD9DB6008BE843 /* PostTableViewCell.swift */; };
+		E393A22D21FD9DB6008BE843 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E393A22B21FD9DB6008BE843 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E393A1FB21FD67F5008BE843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E393A22521FD825C008BE843 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		E393A22821FD92C9008BE843 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E393A22A21FD9DB6008BE843 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		E393A22B21FD9DB6008BE843 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		E393A22221FD81E9008BE843 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E393A22A21FD9DB6008BE843 /* PostTableViewCell.swift */,
+				E393A22B21FD9DB6008BE843 /* PostTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 				E393A1FA21FD67F5008BE843 /* LaunchScreen.storyboard in Resources */,
 				E393A1F721FD67F5008BE843 /* Assets.xcassets in Resources */,
 				E393A1F521FD67E2008BE843 /* Main.storyboard in Resources */,
+				E393A22D21FD9DB6008BE843 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +253,7 @@
 				E393A22921FD92C9008BE843 /* Post.swift in Sources */,
 				E393A22621FD825C008BE843 /* TodosViewController.swift in Sources */,
 				E393A1F021FD67E2008BE843 /* AppDelegate.swift in Sources */,
+				E393A22C21FD9DB6008BE843 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
