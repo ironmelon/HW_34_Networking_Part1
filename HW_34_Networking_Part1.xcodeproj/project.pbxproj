@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		851EB0B35128B429E1EBB8BC /* Pods_HW_34_Networking_Part1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD554EADEBE4E3AF592884BE /* Pods_HW_34_Networking_Part1.framework */; };
 		E393A1F021FD67E2008BE843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A1EF21FD67E2008BE843 /* AppDelegate.swift */; };
-		E393A1F221FD67E2008BE843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A1F121FD67E2008BE843 /* ViewController.swift */; };
 		E393A1F521FD67E2008BE843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E393A1F321FD67E2008BE843 /* Main.storyboard */; };
 		E393A1F721FD67F5008BE843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E393A1F621FD67F5008BE843 /* Assets.xcassets */; };
 		E393A1FA21FD67F5008BE843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E393A1F821FD67F5008BE843 /* LaunchScreen.storyboard */; };
+		E393A22621FD825C008BE843 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A22521FD825C008BE843 /* TodosViewController.swift */; };
+		E393A22921FD92C9008BE843 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393A22821FD92C9008BE843 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,12 @@
 		BD554EADEBE4E3AF592884BE /* Pods_HW_34_Networking_Part1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_34_Networking_Part1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E393A1EC21FD67E2008BE843 /* HW_34_Networking_Part1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_34_Networking_Part1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E393A1EF21FD67E2008BE843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E393A1F121FD67E2008BE843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E393A1F421FD67E2008BE843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E393A1F621FD67F5008BE843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E393A1F921FD67F5008BE843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E393A1FB21FD67F5008BE843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E393A22521FD825C008BE843 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
+		E393A22821FD92C9008BE843 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +80,47 @@
 		E393A1EE21FD67E2008BE843 /* HW_34_Networking_Part1 */ = {
 			isa = PBXGroup;
 			children = (
-				E393A1EF21FD67E2008BE843 /* AppDelegate.swift */,
-				E393A1F121FD67E2008BE843 /* ViewController.swift */,
+				E393A22421FD8201008BE843 /* Supporting Files */,
+				E393A22321FD81EB008BE843 /* Models */,
+				E393A22221FD81E9008BE843 /* Views */,
+				E393A22121FD81E1008BE843 /* Controllers */,
+			);
+			path = HW_34_Networking_Part1;
+			sourceTree = "<group>";
+		};
+		E393A22121FD81E1008BE843 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E393A22521FD825C008BE843 /* TodosViewController.swift */,
 				E393A1F321FD67E2008BE843 /* Main.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E393A22221FD81E9008BE843 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E393A22321FD81EB008BE843 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E393A22821FD92C9008BE843 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E393A22421FD8201008BE843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E393A1EF21FD67E2008BE843 /* AppDelegate.swift */,
 				E393A1F621FD67F5008BE843 /* Assets.xcassets */,
 				E393A1F821FD67F5008BE843 /* LaunchScreen.storyboard */,
 				E393A1FB21FD67F5008BE843 /* Info.plist */,
 			);
-			path = HW_34_Networking_Part1;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E393A1F221FD67E2008BE843 /* ViewController.swift in Sources */,
+				E393A22921FD92C9008BE843 /* Post.swift in Sources */,
+				E393A22621FD825C008BE843 /* TodosViewController.swift in Sources */,
 				E393A1F021FD67E2008BE843 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
